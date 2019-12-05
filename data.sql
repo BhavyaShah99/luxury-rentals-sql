@@ -1,102 +1,122 @@
+--consistent with data.txt
+--(guest_id, name, dob, address)
 insert into guests values
-(10, 'Shah', 'Bhavya', '1999-12-09', '77 Gerrard Street West, Toronto ON'),
-(20, 'Kantimahanti', 'Neehar', '1999-05-03', '77 Gerrard Street West, Toronto ON'),
-(30, 'Chivikula', 'Abhishek', '1999-05-10', '77 Gerrard Street West, Toronto ON'),
-(40, 'Nasit', 'Haresh', '1999-04-24', '200 Elm Street, Toronto ON'),
-(50, 'Patel', 'Dhruv', '1999-04-08', '200 Elm Street, Toronto ON'),
-(60, 'Mirza', 'Sajjad', '1998-11-27', '77 Gerrard Street West, Toronto ON'),
-(70, 'Wick', 'John', '1965-05-03', '77 Holly Street West, California ON'),
-(80, 'Castellano', 'Daniel', '1999-08-08', '87 Bay Street West, Toronto ON'),
-(90, 'Cory', 'Lewis', '1985-05-07', '7 Spadina Street, Toronto ON'),
-(100, 'Craig', 'Daniel', '1997-06-03', '778 Bay Street West, Toronto ON');
+(1, 'Darth Vader', '1985-12-06', 'Death Star'),
+(2, 'Leia, Princess', '2001-10-05', 'Alderaan'),
+(3, 'Romeo Montague', '1988-05-11', 'Verona'),
+(4, 'Juliet Capulet', '1991-07-24', 'Verona'),
+(5, 'Mercutio', '1988-03-03', 'Verona'),
+(6, 'Chewbacca', '1998-09-15', 'Kashyyyk');
 
+--consistent with data.txt
+--(email)
 insert into hosts values
-('bhavyashah9962@gmail.com'),
-('heman829@hotmail.com'),
-('samshah@yahoo.co.in'),
-('morgantookers_rox@gmail.com');
+('luke@gmail.com'),
+('leia@gmail.com'),
+('han@gmail.com');
 
+--consistent with data.txt
+--(property_id, host, bedrooms, bathrooms, capacity, address)
 insert into property values
-(1, 'bhavyashah9962@gmail.com', 5, 3, 7, '87 Miami beach, Miami FL', 350, true),
-(2, 'bhavyashah9962@gmail.com', 7, 4, 7, '56 Hollywood Blvd, Los Angeles CA', 400, true),
-(3, 'heman829@hotmail.com', 10, 5, 14, '8 Toronto beach, Toronto FL', 550, true),
-(4, 'samshah@yahoo.co.in', 14, 10, 20, '3302  St. John Street, Miami FL', 320, true),
-(5, 'morgantookers_rox@gmail.com', 11, 9, 15, '2357  rd Avenue, Texas FL', 3350, true),
-(6, 'bhavyashah9962@gmail.com', 8, 4, 10, '4466  Wallace Street, New York FL', 3500, true),
-(7, 'morgantookers_rox@gmail.com', 4, 3, 6, '4927  West Drive, Ann Arbor MI', 500, true);
+(1, 'luke@gmail.com', 3, 1, 6, 'Tatooine'),
+(2, 'leia@gmail.com', 1, 1, 2, 'Alderaan'),
+(3, 'han@gmail.com', 2, 1, 3, 'Corellia'),
+(4, 'leia@gmail.com', 2, 1, 2, 'Verona'),
+(5, 'han@gmail.com', 2, 2, 4, 'Florence'),
+(6, 'luke@gmail.com', 1, 1, 2, 'Toronto');
 
+--consistent with data.txt
+--(property_id, property_type, walkablity, closest_transit, water_type, lifegaurd_offered)
 insert into propertytype values
-(1, 'city-water', NULL, 'pool', true),
-(2, 'city', 57, 'bus', NULL, false),
-(3, 'city', 86, 'LRT', NULL, false),
-(4, 'water', NULL, 'beach', true),
-(5, 'city', 35, 'none', NULL, false),
-(6, 'city', 95, 'subway', false),
-(7, 'city-water', NULL, 'lake', false),
+(1, 'other', 0, 'none', NULL, false),
+(2, 'water', 0, 'none', 'lake', false),
+(3, 'city', 20, 'bus', NULL, false),
+(4, 'other', 0, 'none', NULL, false),
+(5, 'other', 0, 'none', NULL, false),
+(6, 'other', 0, 'none', NULL, false);
 
+--consistent with data.txt
+--(property_id, luxury)
 insert into luxuries values
 (1, 'hot tub'),
-(1, 'sauna'),
 (1, 'daily cleaning'),
+(2, 'hot tub'),
+(2, 'sauna'),
 (2, 'daily cleaning'),
-(3, 'sauna'),
-(3, 'laundry service'),
-(3, 'hot tub'),
+(3, 'concierge service'),
 (3, 'daily breakfast delivery'),
-(4, 'hot tub'),
-(4, 'concierge service'),
-(5, 'concierge service'),
+(4, 'laundry service'),
+(5, 'hot tub'),
 (6, 'hot tub'),
 (6, 'sauna'),
 (6, 'laundry service'),
-(6, 'concierge service'),
-(6, 'daily breakfast delivery'),
-(7, 'sauna');
+(6, 'daily cleaning'),
+(6, 'concierge service');
 
-insert into availableproperties values
-(1, '2014-01-07');
-(3, '2015-07-09');
-(5, '2015-01-10');
-(6, '2010-12-23');
-(2, '2013-11-30');
+-- insert into availableproperties values;
 
+--consistent with data.txt
+--(rental_id, renter, property_id, num_of_people, check_in_date, check_out_date, renter_credit_card)
 insert into rental values
-(23, 10, 6, 3, '2015-06-03', '2015-07-03', '3429374827382819'),
-(20, 40, 5, 5, '2015-07-12', '2015-07-29', '1233928462718273'),
-(52, 20, 3, 10, '2015-12-31', '2016-01-02', '2343423434544666'),
-(12, 10, 2, 6, '2016-03-09', '2016-03-21', '2344534453455345');
+(1, 1, 2, 2, '2019-01-05', '2019-01-11', '3466704824219330'),
+(2, 2, 3, 3, '2019-01-12', '2019-01-25', '6011253896008199'),
+(3, 3, 2, 2, '2019-01-12', '2019-01-18', '5446447451075463'),
+(4, 5, 5, 3, '2019-01-05', '2019-01-11', '4666153163329984'),
+(5, 6, 5, 2, '2019-01-12', '2019-01-18', '6011624297465933');
 
-insert into retalguestsinfo values
-(23, 10),
-(23, 20),
-(23, 30),
-(20, 40),
-(20, 50),
-(20, 10),
-(20, 100),
-(20, 90),
-(52, 10),
-(52, 20),
-(52, 30),
-(52, 40),
-(52, 50),
-(52, 60),
-(52, 70),
-(52, 80),
-(52, 90),
-(52, 100),
-(12, 10),
-(12, 40),
-(12, 50),
-(12, 60),
-(12, 70),
-(12, 80);
+--consistent with data.txt
+--(rental_id, guest_id)
+insert into rentalguestsinfo values
+(1, 1),
+(1, 2),
+(2, 2),
+(2, 3),
+(2, 4),
+(3, 3),
+(3, 4),
+(4, 5),
+(4, 3),
+(4, 1),
+(5, 6),
+(5, 2);
 
+--consistent with data.txt
+--(rental_id, week, price)
+insert into prices values
+(1, 1, 580),
+(2, 1, 750),
+(2, 2, 750),
+(3, 1, 600),
+(4, 1, 1000),
+(5, 1, 1220);
+
+--consistent with data.txt
+--(guest_id, rental_id, stars)
 insert into propertyrating values
-(10, 23, 'Beautiful palace with awesome amenities definitely will visit again', 4),
-(10, 52, 'Okay-ish place not that clean could use a few renovations', 3);
+(2, 1, 5),
+(1, 1, 2),
+(3, 2, 5),
+(4, 2, 5),
+(2, 2, 1),
+(4, 3, 5),
+(5, 4, 1),
+(3, 4, 1),
+(6, 5, 3);
 
+--consistent with data.txt
+--(renter, rental_id, stars)
 insert into hostrating values
-(10, 23, 5);
+(1, 1, 2),
+(2, 2, 5),
+(3, 3, 3),
+(5, 4, 4),
+(6, 5, 4);
+
+--consistent with data.txt
+--(guest_id, rental_id, comment)
+insert into comments values
+(1, 1, 'Looks like she hides rebel scum here.'),
+(2, 2, 'A bit scruffy, could do with more regular housekeeping'),
+(6, 5, 'Fantastic, arggg');
 
 
